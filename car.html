@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Showroom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #e0a500;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e0a500;
+        }
+
+        .header-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #e0a500;
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .showcase {
+            padding: 80px 20px;
+            background: #111;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .car-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-info {
+            padding: 20px;
+        }
+
+        .services {
+            padding: 80px 20px;
+            background: #111;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537') center/cover fixed;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(17, 17, 17, 0.8);
+            border: 1px solid #e0a500;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 12px 30px;
+            background: #e0a500;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">LuxuryCars</div>
+        <div class="nav-links">
+            <a href="#showcase">Showcase</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Welcome to Luxury Cars</h1>
+            <p>Experience Excellence in Automotive Care</p>
+        </div>
+    </header>
+
+    <section class="showcase" id="showcase">
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888" alt="Luxury Car">
+                <div class="car-info">
+                    <h3>Premium Sedan</h3>
+                    <p>Available for Sale</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Sports Car">
+                <div class="car-info">
+                    <h3>Sports Car</h3>
+                    <p>Limited Edition</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341" alt="SUV">
+                <div class="car-info">
+                    <h3>Luxury SUV</h3>
+                    <p>New Arrival</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Car Service</h3>
+                <p>Professional maintenance and repair services</p>
+            </div>
+            <div class="service-card">
+                <h3>Car Resale</h3>
+                <p>Buy and sell premium used vehicles</p>
+            </div>
+            <div class="service-card">
+                <h3>Car Washing</h3>
+                <p>Premium detailing and cleaning services</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <form class="contact-form">
+            <h2>Contact Us</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
